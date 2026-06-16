@@ -1,0 +1,28 @@
+.navigation {
+  grid-area: navigation;
+  justify-self: center;
+}
+
+.navigationList {
+  display: flex;
+  gap: 28px;
+}
+
+.navigationLink {
+  font-weight: var(--fw-regular);
+  font-size: var(--fz-16);
+  line-height: 1.25;
+
+  color: var(--main);
+
+  transition: color var(--transition);
+}
+
+.navigationLink:hover,
+.navigationLink:focus {
+  color: var(--button);
+}
+
+.active {
+  color: var(--button);
+}

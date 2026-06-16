@@ -1,0 +1,24 @@
+.logoContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+
+  grid-area: logo;
+  justify-self: start;
+
+  text-decoration: none;
+  color: var(--main);
+
+  transition: color var(--transition);
+}
+
+.logoContainer:hover {
+  color: var(--button);
+}
+
+.logo {
+  font-size: var(--fz-20);
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}

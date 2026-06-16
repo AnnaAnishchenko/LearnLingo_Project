@@ -1,9 +1,13 @@
 /*src/App.tsx */
 
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+
 function App() {
   return (
     <>
-      <h1>New project</h1>
+      <Header />
+      <Hero />
     </>
   );
 }

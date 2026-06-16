@@ -1,0 +1,61 @@
+.authButtons {
+  grid-area: auth;
+  justify-self: end;
+
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  font-weight: var(--fw-bold);
+  font-size: var(--fz-16);
+  line-height: 1.25;
+}
+
+.login {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  color: var(--main);
+  transition: color var(--transition);
+}
+
+.login:hover,
+.login:focus {
+  color: var(--button);
+}
+
+.loginIcon {
+  color: var(--button);
+}
+
+/* щоб іконка теж змінювала колір */
+.login:hover .loginIcon,
+.login:focus .loginIcon {
+  color: var(--button-hover);
+}
+
+.registerBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 166px;
+  height: 48px;
+  padding: 14px 39px;
+
+  border-radius: 12px;
+
+  background-color: var(--main);
+  color: var(--white);
+
+  transition:
+    background-color var(--transition),
+    color var(--transition);
+}
+
+.registerBtn:hover,
+.registerBtn:focus {
+  background-color: var(--button);
+  color: var(--main);
+}

@@ -7,10 +7,12 @@ import css from "./Header.module.css";
 
 export default function Header() {
   return (
-    <header className={`container ${css.headerContainer}`}>
-      <Logo />
-      <Navigation />
-      <AuthButtons />
+    <header className="container">
+      <div className={css.headerContainer}>
+        <Logo />
+        <Navigation />
+        <AuthButtons />
+      </div>
     </header>
   );
 }

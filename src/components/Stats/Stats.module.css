@@ -1,0 +1,7 @@
+.statsBox {
+  grid-area: stats;
+  height: 116px;
+
+  border: 1.5px dashed #f4c550;
+  border-radius: 30px;
+}

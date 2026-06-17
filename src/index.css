@@ -118,7 +118,8 @@ button {
   width: 100%;
   max-width: 1440px;
   padding-inline: 20px;
-  /* margin: 0 auto; */
+  margin: 0 auto;
+  padding-inline: 64px;
 }
 
 h1,

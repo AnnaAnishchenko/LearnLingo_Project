@@ -1,13 +1,10 @@
 .headerContainer {
-  margin: 20px 128px;
   display: grid;
-  max-width: 1184px;
-  height: 48px;
-
-  align-items: center;
-  /* justify-items: center; */
-  /* grid-template-columns: 133px auto 255px;
-   */
   grid-template-columns: 1fr auto 1fr;
   grid-template-areas: "logo navigation auth";
+  align-items: center;
+
+  height: 48px;
+  margin-top: 20px;
+  margin-bottom: 32px;
 }

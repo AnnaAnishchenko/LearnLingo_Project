@@ -32,7 +32,7 @@
 
 .highlight {
   font-style: var(--fs-italic);
-  /* font-weight: var(--fw-regular); */
+
   border-radius: 8px;
   width: 195px;
   height: 40px;
@@ -42,8 +42,7 @@
 .heroDescription {
   width: 471px;
   height: 66px;
-  /* font-weight: var(--fw-regular); */
-  /* font-size: 16px; */
+
   line-height: 1.38;
   letter-spacing: -0.02em;
   margin-bottom: 64px;
@@ -58,7 +57,7 @@
   font-weight: var(--fw-bold);
   font-size: var(--fz-18);
   line-height: 1.56;
-  transition: color var(--transition);
+  transition: background-color var(--transition);
 }
 .getStartedButton:hover,
 .getStartedButton:focus {

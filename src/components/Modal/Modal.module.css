@@ -1,0 +1,48 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: relative;
+
+  background-color: #fff;
+
+  border-radius: 30px;
+  width: 565px;
+  min-height: 505px;
+
+  background: #fff;
+}
+
+.closeButton {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+
+  background-color: transparent;
+
+  transition: stroke var(--transition);
+}
+
+.closeButton svg {
+  stroke: var(--main);
+}
+
+.closeButton:hover svg {
+  stroke: var(--button);
+}

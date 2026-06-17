@@ -1,7 +1,37 @@
 .statsBox {
   grid-area: stats;
-  height: 116px;
+  min-height: 116px;
 
-  border: 1.5px dashed #f4c550;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 40px 122px;
+
+  border: 1.5px dashed var(--button);
   border-radius: 30px;
+
+  /* background-color: var(--white); */
+}
+
+.statsItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.value {
+  font-weight: var(--fw-medium);
+  font-size: var(--fz-28);
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+
+.text {
+  max-width: 96px;
+
+  font-size: var(--fz-14);
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: rgba(18, 20, 23, 0.7);
 }

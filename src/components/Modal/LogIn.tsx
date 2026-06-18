@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import css from "./LogIn.module.css";
+import css from "./Modal.module.css";
 
 export default function LogIn() {
   const [showPassword, setShowPassword] = useState(false);

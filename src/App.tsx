@@ -4,7 +4,8 @@ import { useState } from "react";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Modal from "./components/Modal/Modal";
-import LogIn from "./components/LogIn/LogIn";
+import LogIn from "./components/Modal/LogIn";
+import Registration from "./components/Modal/Registration";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,16 +18,26 @@ function App() {
     <>
       <Header />
       <Hero />
+      {/* для перевірки виключити ф-цію модалки// */}
 
-      {/* для перевірки підключили модалку// */}
-      {/* {isModalOpen && (
+      {isModalOpen && (
         <Modal onClose={closeModal}>
           <LogIn />
         </Modal>
-      )} */}
-      <Modal onClose={() => {}}>
+      )}
+
+      {isModalOpen && (
+        <Modal onClose={closeModal}>
+          <Registration />
+        </Modal>
+      )}
+      {/* для перевірки підключили модалку// */}
+      {/* <Modal onClose={() => {}}>
         <LogIn />
-      </Modal>
+      </Modal> */}
+      {/* <Modal onClose={() => {}}>
+        <Registration />
+      </Modal> */}
       {/* видалити після перевірки */}
     </>
   );

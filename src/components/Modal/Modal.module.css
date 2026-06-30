@@ -132,3 +132,17 @@
 .logInButton:focus {
   background-color: var(--button-hover);
 }
+
+.logOutButton {
+  border-radius: 12px;
+
+  font-weight: var(--fw-bold);
+
+  line-height: 1.56;
+  transition: background-color var(--transition);
+}
+
+.logOutButton:hover,
+.logOutButton:focus {
+  background-color: var(--button-hover);
+}

@@ -1,20 +1,25 @@
 //src/components/AuthButtons/AuthButtons.tsx
-import { Link } from "react-router-dom";
+
 import css from "./AuthButtons.module.css";
 
-export default function AuthButtons() {
+type Props = {
+  onLogin: () => void;
+  onRegister: () => void;
+};
+
+export default function AuthButtons({ onLogin, onRegister }: Props) {
   return (
     <div className={css.authButtons}>
-      <Link to="/login" className={css.login}>
-        <svg width="20" height="20" className={css.loginIcon}>
-          <use href="/icons.svg#icon-log-in"></use>
+      <button onClick={onLogin} className={css.login}>
+        <svg width="20" height="20">
+          <use href="/icons.svg#icon-log-in" />
         </svg>
         <span>Login</span>
-      </Link>
+      </button>
 
-      <Link to="/register" className={css.registerBtn}>
+      <button onClick={onRegister} className={css.registerBtn}>
         Registration
-      </Link>
+      </button>
     </div>
   );
 }

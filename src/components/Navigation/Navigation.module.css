@@ -9,11 +9,11 @@
 }
 
 .navigationLink {
-  font-weight: var(--fw-regular);
-  font-size: var(--fz-16);
+  /* font-weight: var(--fw-regular); */
+  /* font-size: var(--fz-16); */
   line-height: 1.25;
 
-  color: var(--main);
+  /* color: var(--main); */
 
   transition: color var(--transition);
 }

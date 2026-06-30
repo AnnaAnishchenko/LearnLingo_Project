@@ -1,0 +1,15 @@
+.loadMoreButton {
+  border-radius: 12px;
+  padding: 16px 48px;
+  min-width: 183px;
+  height: 60px;
+  background: var(--button);
+  font-weight: var(--fw-bold);
+  font-size: var(--fz-18);
+  line-height: 1.56;
+  transition: background-color var(--transition);
+}
+.loadMoreButton:hover,
+.loadMoreButton:focus {
+  background-color: var(--button-hover);
+}

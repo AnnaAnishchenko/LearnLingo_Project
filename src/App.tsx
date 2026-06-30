@@ -3,42 +3,67 @@ import { useState } from "react";
 
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
+// import TeachersPage from "./components/TeachersPage/TeachersPage";
+
 import Modal from "./components/Modal/Modal";
 import LogIn from "./components/Modal/LogIn";
 import Registration from "./components/Modal/Registration";
 
+import { onAuthStateChanged } from "firebase/auth";
+import type { User } from "firebase/auth";
+
+import { auth } from "./firebase/firebase";
+import { useEffect } from "react";
+
+type ModalType = "login" | "register" | null;
+
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalType, setModalType] = useState<ModalType>(null);
 
-  const openModal = () => setIsModalOpen(true);
+  const [user, setUser] = useState<User | null>(null);
 
-  const closeModal = () => setIsModalOpen(false);
+  useEffect(() => {
+    const unsub = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    return () => unsub();
+  }, []);
+
+  useEffect(() => {
+    if (user) {
+      setModalType(null);
+    }
+  }, [user]);
+
+  const closeModal = () => setModalType(null);
 
   return (
     <>
-      <Header />
-      <Hero />
-      {/* для перевірки виключити ф-цію модалки// */}
+      {/* для переключення і перевірки відключаємо примусово сторінки */}
+      {/* не забути підключити!!!!! */}
 
-      {isModalOpen && (
+      <Header
+        user={user}
+        onLogin={() => setModalType("login")}
+        onRegister={() => setModalType("register")}
+      />
+      <Hero />
+      {/* <TeachersPage /> */}
+
+      {/* LOGIN */}
+      {modalType === "login" && (
         <Modal onClose={closeModal}>
           <LogIn />
         </Modal>
       )}
 
-      {isModalOpen && (
+      {/* REGISTER */}
+      {modalType === "register" && (
         <Modal onClose={closeModal}>
           <Registration />
         </Modal>
       )}
-      {/* для перевірки підключили модалку// */}
-      {/* <Modal onClose={() => {}}>
-        <LogIn />
-      </Modal> */}
-      {/* <Modal onClose={() => {}}>
-        <Registration />
-      </Modal> */}
-      {/* видалити після перевірки */}
     </>
   );
 }

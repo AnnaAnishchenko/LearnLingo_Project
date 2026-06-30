@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-// import TeachersPage from "./components/TeachersPage/TeachersPage";
+import TeachersPage from "./components/TeachersPage/TeachersPage";
 
 import Modal from "./components/Modal/Modal";
 import LogIn from "./components/Modal/LogIn";
@@ -40,16 +40,13 @@ function App() {
 
   return (
     <>
-      {/* для переключення і перевірки відключаємо примусово сторінки */}
-      {/* не забути підключити!!!!! */}
-
       <Header
         user={user}
         onLogin={() => setModalType("login")}
         onRegister={() => setModalType("register")}
       />
       <Hero />
-      {/* <TeachersPage /> */}
+      <TeachersPage />
 
       {/* LOGIN */}
       {modalType === "login" && (

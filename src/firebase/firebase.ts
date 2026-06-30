@@ -9,6 +9,7 @@ const firebaseConfig = {
   authDomain: "learnlingoproject-54c76.firebaseapp.com",
   databaseURL:
     "https://learnlingoproject-54c76-default-rtdb.europe-west1.firebasedatabase.app/",
+
   projectId: "learnlingoproject-54c76",
   storageBucket: "learnlingoproject-54c76.firebasestorage.app",
   messagingSenderId: "556908049293",
